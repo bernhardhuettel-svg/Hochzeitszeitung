@@ -1,13 +1,16 @@
-const prevBtn = document.querySelector("#prev-btn");
-const nextBtn = document.querySelector("#next-btn");
+const prevBtn = document.querySelector("#prevBtn");
+const nextBtn = document.querySelector("#nextBtn");
 const book = document.querySelector("#book");
 
-const paper1 = document.querySelector("#p1");
-const paper2 = document.querySelector("#p2");
-const paper3 = document.querySelector("#p3");
+const papers = [
+    document.querySelector("#p1"),
+    document.querySelector("#p2"),
+    document.querySelector("#p3"),
+    document.querySelector("#p4")
+];
 
 let currentLocation = 1;
-let numOfPapers = 3;
+let numOfPapers = 4;
 let maxLocation = numOfPapers + 1;
 
 function openBook() {
@@ -27,20 +30,22 @@ function goNextPage() {
         switch(currentLocation) {
             case 1:
                 openBook();
-                paper1.classList.add("flipped");
-                paper1.style.zIndex = 1;
+                papers[0].classList.add("flipped");
+                papers[0].style.zIndex = 1;
                 break;
             case 2:
-                paper2.classList.add("flipped");
-                paper2.style.zIndex = 2;
+                papers[1].classList.add("flipped");
+                papers[1].style.zIndex = 2;
                 break;
             case 3:
-                paper3.classList.add("flipped");
-                paper3.style.zIndex = 3;
+                papers[2].classList.add("flipped");
+                papers[2].style.zIndex = 3;
+                break;
+            case 4:
+                papers[3].classList.add("flipped");
+                papers[3].style.zIndex = 4;
                 closeBook(false);
                 break;
-            default:
-                throw new Error("Unknown state");
         }
         currentLocation++;
     }
@@ -51,24 +56,26 @@ function goPrevPage() {
         switch(currentLocation) {
             case 2:
                 closeBook(true);
-                paper1.classList.remove("flipped");
-                paper1.style.zIndex = 3;
+                papers[0].classList.remove("flipped");
+                papers[0].style.zIndex = 4;
                 break;
             case 3:
-                paper2.classList.remove("flipped");
-                paper2.style.zIndex = 2;
+                papers[1].classList.remove("flipped");
+                papers[1].style.zIndex = 3;
                 break;
             case 4:
-                openBook();
-                paper3.classList.remove("flipped");
-                paper3.style.zIndex = 1;
+                papers[2].classList.remove("flipped");
+                papers[2].style.zIndex = 2;
                 break;
-            default:
-                throw new Error("Unknown state");
+            case 5:
+                openBook();
+                papers[3].classList.remove("flipped");
+                papers[3].style.zIndex = 1;
+                break;
         }
         currentLocation--;
     }
 }
 
-prevBtn.addEventListener("click", goPrevPage);
 nextBtn.addEventListener("click", goNextPage);
+prevBtn.addEventListener("click", goPrevPage);
