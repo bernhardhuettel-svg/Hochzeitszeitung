@@ -3,51 +3,43 @@
 :root {
     --paper: #f4eee0;
     --ink: #1a1a1a;
+    --book-width: 450px;
+    --book-height: 650px;
 }
+
+* { box-sizing: border-box; }
 
 body {
     background-color: #2c2c2c;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
     margin: 0;
-    overflow: hidden;
-}
-
-/* Äußerer Wrapper für Buttons & Zeitung */
-.main-wrapper {
-    display: flex;
-    align-items: center;
-    gap: 50px;
-}
-
-.external-nav-btn {
-    background: rgba(255, 255, 255, 0.1);
-    color: white;
-    border: 2px solid white;
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
-    font-size: 2rem;
-    cursor: pointer;
-    transition: all 0.3s ease;
+    padding: 0;
     display: flex;
     justify-content: center;
     align-items: center;
-    user-select: none;
+    height: 100vh;
+    overflow: hidden;
+    font-family: 'Old Standard TT', serif;
 }
 
-.external-nav-btn:hover {
-    background: white;
-    color: #2c2c2c;
+/* Der Wrapper hält alles zusammen */
+.viewport-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
 }
 
-/* ZEITUNGS-CONTAINER */
-.book-container {
-    width: 550px;
-    height: 750px;
-    perspective: 2500px;
+/* DYNAMISCHE SKALIERUNG: Hier passiert die Magie */
+.book-scaler {
+    width: var(--book-width);
+    height: var(--book-height);
+    position: relative;
+    /* Verkleinert die Zeitung automatisch auf kleinen Bildschirmen */
+    transform: scale(min(1, calc(85vw / var(--book-width)), calc(85vh / var(--book-height))));
+    transform-origin: center;
+    perspective: 2000px;
 }
 
 .book {
@@ -62,7 +54,7 @@ body {
     width: 100%;
     height: 100%;
     transform-origin: left;
-    transition: transform 1s cubic-bezier(0.645, 0.045, 0.355, 1);
+    transition: transform 0.8s cubic-bezier(0.645, 0.045, 0.355, 1);
     transform-style: preserve-3d;
 }
 
@@ -72,92 +64,54 @@ body {
     height: 100%;
     background: var(--paper);
     background-image: url("https://www.transparenttextures.com/patterns/paper-fibers.png");
-    padding: 40px;
-    box-sizing: border-box;
+    padding: 30px;
     backface-visibility: hidden;
     border: 1px solid #d1c7ac;
-    box-shadow: inset 0 0 50px rgba(0,0,0,0.1), 5px 5px 20px rgba(0,0,0,0.3);
+    box-shadow: inset 0 0 50px rgba(0,0,0,0.1), 5px 5px 20px rgba(0,0,0,0.4);
     color: var(--ink);
-    font-family: 'Old Standard TT', serif;
 }
 
 .back { transform: rotateY(180deg); }
 .flipped { transform: rotateY(-180deg); }
 
-/* ZEITUNGS-ELEMENTE */
-.newspaper-title {
-    font-family: 'UnifrakturMaguntia', serif;
-    font-size: 3rem;
-    text-align: center;
-    margin: 0;
-}
-
-.newspaper-title-small {
-    font-family: 'UnifrakturMaguntia', serif;
-    font-size: 2rem;
-    text-align: center;
-}
-
-.double-line { border-top: 4px double var(--ink); margin: 10px 0; }
-
-.meta {
-    border-top: 1px solid var(--ink);
-    border-bottom: 1px solid var(--ink);
-    text-align: center;
-    font-size: 0.8rem;
-    padding: 5px 0;
-    font-weight: bold;
-}
-
-.section-title {
-    font-family: 'Playfair Display', serif;
-    text-transform: uppercase;
-    text-align: center;
-    border-bottom: 1px solid var(--ink);
-    margin-bottom: 20px;
-}
-
-.newspaper-columns {
-    column-count: 2;
-    column-gap: 20px;
-    text-align: justify;
-    font-size: 0.9rem;
-}
-
-/* TIMELINE STYLING */
-.vintage-timeline {
-    border-left: 2px solid var(--ink);
-    margin-left: 10px;
-    padding-left: 20px;
-}
-
-.tl-event { margin-bottom: 25px; position: relative; }
-.tl-date { font-weight: bold; display: block; text-transform: uppercase; }
-.tl-event::before {
-    content: "";
+/* NAVIGATIONSPFEILE */
+.nav-arrow {
     position: absolute;
-    left: -27px;
-    top: 5px;
-    width: 12px;
-    height: 12px;
-    background: var(--ink);
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+    border: 2px solid white;
+    width: 50px;
+    height: 50px;
     border-radius: 50%;
+    font-size: 1.5rem;
+    cursor: pointer;
+    z-index: 1000;
+    transition: 0.3s;
 }
 
-/* BILDER & GRIDS */
-.photo-placeholder, .grid-box {
-    border: 2px solid var(--ink);
-    background: #e0e0e0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 10px 0;
-    font-weight: bold;
-    text-align: center;
-}
+.nav-arrow:hover { background: white; color: #000; }
+.prev { left: 10px; }
+.next { right: 10px; }
 
-.photo-placeholder { height: 200px; }
+/* ZEITUNGS-LAYOUT */
+.newspaper-title { font-family: 'UnifrakturMaguntia', serif; font-size: 2.8rem; text-align: center; margin: 0; }
+.newspaper-title-small { font-family: 'UnifrakturMaguntia', serif; font-size: 2rem; text-align: center; }
+.double-line { border-top: 4px double var(--ink); margin: 10px 0; }
+.meta { border-top: 1px solid var(--ink); border-bottom: 1px solid var(--ink); text-align: center; font-size: 0.7rem; padding: 3px; font-weight: bold; margin-bottom: 15px; }
+.section-title { font-family: 'Playfair Display', serif; text-transform: uppercase; text-align: center; border-bottom: 1px solid var(--ink); margin-bottom: 15px; }
+.newspaper-columns { column-count: 2; column-gap: 15px; text-align: justify; font-size: 0.85rem; }
+.vintage-timeline { border-left: 2px solid var(--ink); padding-left: 15px; }
+.tl-event { margin-bottom: 20px; position: relative; }
+.tl-event::before { content: ""; position: absolute; left: -21px; top: 4px; width: 10px; height: 10px; background: var(--ink); border-radius: 50%; }
+.tl-date { font-weight: bold; display: block; }
+.photo-placeholder { width: 100%; height: 180px; border: 1px solid var(--ink); background: #ccc; display: flex; align-items: center; justify-content: center; font-weight: bold; }
 .photo-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
-.grid-box { height: 120px; font-size: 0.7rem; }
-
+.grid-box { height: 100px; border: 1px solid var(--ink); background: #ccc; display: flex; align-items: center; justify-content: center; font-size: 0.7rem; font-weight: bold; }
 .center-text { text-align: center; }
+
+/* Verstecke Pfeile auf sehr kleinen Displays, falls sie überlappen, oder verkleinere sie */
+@media (max-width: 500px) {
+    .nav-arrow { width: 40px; height: 40px; font-size: 1.2rem; }
+}
