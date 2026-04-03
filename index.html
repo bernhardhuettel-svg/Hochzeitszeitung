@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hochzeitszeitung - Digital Edition</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="book-container">
+    <div id="book" class="book">
+        
+        <div class="page" id="p1" style="z-index: 5;">
+            <div class="front">
+                <div class="content cover-style">
+                    <p class="meta">EXTRA-BLATT | 24. MAI 2026</p>
+                    <h1 class="newspaper-title">DIE HOCHZEITSPOST</h1>
+                    <hr class="double-line">
+                    <div class="main-article">
+                        <h2>SIE HABEN JA GESAGT!</h2>
+                        <div class="photo-placeholder">HIER FOTO EINSETZEN</div>
+                        <p class="headline-sub">Ein Märchen wird wahr: Anna & Lukas trauen sich.</p>
+                    </div>
+                    <button class="flip-btn" onclick="nextPage()">Zeitung öffnen &rarr;</button>
+                </div>
+            </div>
+            <div class="back">
+                <div class="content">
+                    <h3>Editorial</h3>
+                    <p>Liebe Gäste, heute feiern wir die Liebe. In dieser Ausgabe finden Sie alles über das Brautpaar...</p>
+                    <hr>
+                    <h3>Inhalt</h3>
+                    <ul>
+                        <li>Die Meilensteine (Timeline)</li>
+                        <li>Das große Interview</li>
+                        <li>Glückwünsche</li>
+                        <li>Impressum</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="page" id="p2" style="z-index: 4;">
+            <div class="front">
+                <div class="content">
+                    <h2 class="section-title">Unsere Meilensteine</h2>
+                    <div class="timeline">
+                        <div class="tl-item">
+                            <strong>2020:</strong> Das erste Treffen im Park.
+                        </div>
+                        <div class="tl-item">
+                            <strong>2021:</strong> Die erste gemeinsame Wohnung.
+                        </div>
+                        <div class="tl-item">
+                            <strong>2023:</strong> Der Antrag am Strand von Italien.
+                        </div>
+                        <div class="tl-item">
+                            <strong>Heute:</strong> Der schönste Tag unseres Lebens.
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="back">
+                <div class="content">
+                    <h2 class="section-title">Das Interview</h2>
+                    <p><strong>Frage:</strong> Wer kann besser kochen?</p>
+                    <p><em>Antwort Lukas:</em> "Ich, definitiv. Anna ist für die Deko zuständig!"</p>
+                    <p><strong>Frage:</strong> Wohin geht die Hochzeitsreise?</p>
+                    <p><em>Antwort Anna:</em> "Das bleibt noch ein Geheimnis, aber es gibt viel Sand!"</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="page" id="p3" style="z-index: 3;">
+            <div class="front">
+                <div class="content">
+                    <h2 class="section-title">10 goldene Ehe-Regeln</h2>
+                    <ol class="rules-list">
+                        <li>Immer "Ja, Schatz" sagen.</li>
+                        <li>Niemals hungrig streiten.</li>
+                        <li>Den Müll ohne Aufforderung rausbringen.</li>
+                        <li>Den Jahrestag in den Kalender eintragen (mit Alarm!).</li>
+                    </ol>
+                </div>
+            </div>
+            <div class="back">
+                <div class="content">
+                    <h2 class="section-title">Galerie der Liebe</h2>
+                    <div class="photo-grid">
+                        <div class="grid-box">Erster Urlaub</div>
+                        <div class="grid-box">Verlobung</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="page" id="p4" style="z-index: 2;">
+            <div class="front">
+                <div class="content">
+                    <h2 class="section-title">Danksagung</h2>
+                    <p>Wir danken unseren Eltern, Trauzeugen und allen Freunden, die diesen Weg mit uns gegangen sind.</p>
+                    <p>Ohne euch wäre dieser Tag nicht das, was er ist.</p>
+                </div>
+            </div>
+            <div class="back">
+                <div class="content">
+                    <h1 class="newspaper-title-small">ENDE</h1>
+                    <p class="center-text">Danke fürs Lesen!</p>
+                    <hr>
+                    <p class="meta center-text">© 2026 Wedding Press Corp.</p>
+                    <button class="flip-btn" onclick="prevPage()">&larr; Zurückblättern</button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
