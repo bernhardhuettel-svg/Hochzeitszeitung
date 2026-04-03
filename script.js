@@ -7,8 +7,10 @@ function nextPage() {
         const page = document.getElementById(`p${currentPage}`);
         page.classList.add('flipped');
         
-        // Z-Index Management
-        page.style.zIndex = currentPage;
+        // Nach der Animation Z-Index fixieren
+        setTimeout(() => {
+            page.style.zIndex = currentPage;
+        }, 500);
         
         currentPage++;
     }
@@ -20,7 +22,7 @@ function prevPage() {
         const page = document.getElementById(`p${currentPage}`);
         page.classList.remove('flipped');
         
-        // Den Z-Index beim Zurückblättern wieder erhöhen
+        // Beim Zurückblättern den Z-Index sofort wieder anheben
         page.style.zIndex = 10 - currentPage;
     }
 }
