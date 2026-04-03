@@ -1,28 +1,27 @@
-let currentPage = 1;
-const pages = document.querySelectorAll('.page');
-const totalPages = pages.length;
+let currentStep = 1;
+const papers = [
+    document.getElementById('p1'),
+    document.getElementById('p2'),
+    document.getElementById('p3'),
+    document.getElementById('p4')
+];
 
 function nextPage() {
-    if (currentPage <= totalPages) {
-        const page = document.getElementById(`p${currentPage}`);
-        page.classList.add('flipped');
-        
-        // Nach der Animation Z-Index fixieren
-        setTimeout(() => {
-            page.style.zIndex = currentPage;
-        }, 500);
-        
-        currentPage++;
+    if (currentStep <= papers.length) {
+        const p = papers[currentStep - 1];
+        p.classList.add('flipped');
+        // Nach dem Umblättern z-index senken, damit die nächste Seite oben liegt
+        setTimeout(() => { p.style.zIndex = currentStep; }, 300);
+        currentStep++;
     }
 }
 
 function prevPage() {
-    if (currentPage > 1) {
-        currentPage--;
-        const page = document.getElementById(`p${currentPage}`);
-        page.classList.remove('flipped');
-        
-        // Beim Zurückblättern den Z-Index sofort wieder anheben
-        page.style.zIndex = 10 - currentPage;
+    if (currentStep > 1) {
+        currentStep--;
+        const p = papers[currentStep - 1];
+        p.classList.remove('flipped');
+        // Beim Zurückblättern z-index wieder erhöhen
+        p.style.zIndex = 10 - currentStep;
     }
 }
