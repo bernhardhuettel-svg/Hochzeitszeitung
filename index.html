@@ -3,77 +3,117 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Stephan & Kathi - Hochzeitszeitung</title>
+    <title>Hochzeitszeitung: Stephan & Kathi</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<div class="wrapper">
-    <div class="book">
-        <div class="paper" id="p1">
+<div class="scene">
+    <div class="book" id="book">
+        
+        <div class="paper" id="p1" style="z-index: 4;">
             <div class="front">
-                <div id="f1" class="front-content">
-                    <p class="newspaper-meta">EXTRA-BLATT | 2026</p>
+                <div class="content">
+                    <p class="newspaper-meta">SONDERAUSGABE | 2026</p>
                     <h1 class="newspaper-title">Die Hochzeitspost</h1>
-                    <div class="img-placeholder">FOTO STEPHAN & KATHI</div>
-                    <h2>SIE HABEN JA GESAGT!</h2>
-                    <p class="intro-text">Ein Tag für die Ewigkeit...</p>
+                    <hr class="double-line">
+                    <div class="main-story">
+                        <h2>STEPHAN & KATHI</h2>
+                        <div class="img-box">DAS BRAUTPAAR</div>
+                        <p class="headline-sub">Ein Ja-Wort, das die Herzen berührt.</p>
+                        <div class="cols-2">
+                            <p>Heute ist es endlich soweit: In einer feierlichen Zeremonie geben sich Stephan und Kathi das Versprechen für die Ewigkeit...</p>
+                        </div>
+                    </div>
                 </div>
             </div>
             <div class="back">
-                <div id="b1" class="back-content">
-                    <h2>Inhalt</h2>
-                    <ul>
-                        <li>Die Chronik</li>
-                        <li>Das Interview</li>
-                        <li>Ehe-Regeln</li>
+                <div class="content">
+                    <h2>Editorial</h2>
+                    <p>Liebe Leser, willkommen zu dieser ganz besonderen Ausgabe. Wir werfen einen Blick hinter die Kulissen der Traumhochzeit.</p>
+                    <hr>
+                    <h3>Was Sie erwartet:</h3>
+                    <ul class="vintage-list">
+                        <li>Die Chronik der Liebe</li>
+                        <li>Das Exklusiv-Interview</li>
+                        <li>Wünsche der Gäste</li>
                     </ul>
                 </div>
             </div>
         </div>
 
-        <div class="paper" id="p2">
+        <div class="paper" id="p2" style="z-index: 3;">
             <div class="front">
-                <div id="f2" class="front-content">
-                    <h2>Unsere Chronik</h2>
+                <div class="content">
+                    <h2 class="section-title">Unsere Chronik</h2>
                     <div class="timeline">
-                        <p><strong>2020:</strong> Das Treffen</p>
-                        <p><strong>2023:</strong> Der Antrag</p>
-                        <p><strong>2026:</strong> Die Hochzeit</p>
+                        <p><strong>2020:</strong> Das schicksalhafte erste Treffen.</p>
+                        <p><strong>2022:</strong> Die erste gemeinsame Wohnung.</p>
+                        <p><strong>2024:</strong> Der romantische Antrag im Urlaub.</p>
+                        <p><strong>Heute:</strong> Der Beginn eines neuen Kapitels.</p>
                     </div>
                 </div>
             </div>
             <div class="back">
-                <div id="b2" class="back-content">
-                    <h2>Das Interview</h2>
-                    <p><strong>Frage:</strong> Wer kocht besser?</p>
-                    <p><strong>Stephan:</strong> Ich! (natürlich)</p>
+                <div class="content">
+                    <h2 class="section-title">Das Interview</h2>
+                    <div class="cols-2">
+                        <p><strong>Reporter:</strong> Wer braucht morgens länger im Bad?</p>
+                        <p><strong>Stephan:</strong> "Definitiv Kathi!"</p>
+                        <p><strong>Kathi:</strong> "Nur weil ich meine Locken bändigen muss!"</p>
+                        <p><strong>Reporter:</strong> Was war der erste Eindruck?</p>
+                        <p><strong>Stephan:</strong> "Wow!"</p>
+                    </div>
                 </div>
             </div>
         </div>
 
-        <div class="paper" id="p3">
+        <div class="paper" id="p3" style="z-index: 2;">
             <div class="front">
-                <div id="f3" class="front-content">
-                    <h2>Ehe-Regeln</h2>
-                    <p>1. Kathi hat immer Recht.</p>
-                    <p>2. Wenn nicht, tritt Regel 1 in Kraft.</p>
+                <div class="content">
+                    <h2 class="section-title">Ehe-Ratgeber</h2>
+                    <p class="center"><em>10 Goldene Regeln für Stephan</em></p>
+                    <ol class="rules">
+                        <li>Kathi hat immer Recht.</li>
+                        <li>Wenn Kathi unrecht hat, tritt Regel 1 in Kraft.</li>
+                        <li>Glückliche Frau, glückliches Leben!</li>
+                    </ol>
                 </div>
             </div>
             <div class="back">
-                <div id="b3" class="back-content">
-                    <h1 class="newspaper-title-small">ENDE</h1>
-                    <p>Stephan & Kathi | 2026</p>
-                    <p class="newspaper-meta">Dankeschön!</p>
+                <div class="content">
+                    <h2 class="section-title">Galerie</h2>
+                    <div class="photo-grid">
+                        <div class="grid-item">ERSTER URLAUB</div>
+                        <div class="grid-item">VERLOBUNG</div>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
 
-    <div class="nav-container">
-        <button id="prev-btn" class="nav-button">Zurück</button>
-        <button id="next-btn" class="nav-button">Weiter</button>
+        <div class="paper" id="p4" style="z-index: 1;">
+            <div class="front">
+                <div class="content">
+                    <h2 class="section-title">Danksagung</h2>
+                    <p>Wir danken allen Freunden und Verwandten, die diesen Tag unvergesslich machen.</p>
+                </div>
+            </div>
+            <div class="back">
+                <div class="content">
+                    <h1 class="newspaper-title-small">ENDE</h1>
+                    <hr class="double-line">
+                    <p class="center">Stephan & Kathi | 2026</p>
+                    <p class="newspaper-meta center">Druck & Verlag: Hochzeitsgesellschaft</p>
+                </div>
+            </div>
+        </div>
+
     </div>
+</div>
+
+<div class="controls">
+    <button id="prevBtn">Zurück</button>
+    <button id="nextBtn">Weiter</button>
 </div>
 
 <script src="script.js"></script>
