@@ -15,6 +15,6 @@ function prevPage() {
         currentPage--;
         const page = document.getElementById(`p${currentPage}`);
         page.classList.remove('flipped');
-        page.style.zIndex = pages.length - currentPage + 1;
+        page.style.zIndex = 10 - currentPage;
     }
 }
