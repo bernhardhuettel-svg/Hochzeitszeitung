@@ -3,109 +3,102 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>Stephan & Kathi - Die Hochzeitspost</title>
+    <title>Stephan & Kathi - Hochzeitszeitung</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<div class="main-container">
-    <div class="book" id="book">
-        
-        <div class="paper" id="p1">
-            <div class="front">
-                <div class="content cover">
-                    <p class="meta">SONDERAUSGABE | 2026</p>
-                    <h1 class="title">Die Hochzeitspost</h1>
-                    <hr class="double">
-                    <div class="feature">
-                        <h2>STEPHAN & KATHI</h2>
-                        <div class="photo-box">UNSER BILD</div>
-                        <p class="subtitle">Sie haben "Ja" gesagt!</p>
-                    </div>
-                </div>
-            </div>
-            <div class="back">
-                <div class="content">
-                    <h2>Inhalt</h2>
-                    <ul class="vintage-list">
-                        <li>Seite 3: Unsere Timeline</li>
-                        <li>Seite 4: Das Interview</li>
-                        <li>Seite 5: Ehe-Gesetze</li>
-                        <li>Seite 6: Fotogalerie</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-
-        <div class="paper" id="p2">
-            <div class="front">
-                <div class="content">
-                    <h2 class="section-title">Die Chronik</h2>
-                    <div class="timeline">
-                        <p><strong>2020:</strong> Das erste Treffen</p>
-                        <p><strong>2023:</strong> Der Heiratsantrag</p>
-                        <p><strong>2026:</strong> Der große Tag</p>
-                    </div>
-                </div>
-            </div>
-            <div class="back">
-                <div class="content">
-                    <h2 class="section-title">Das Interview</h2>
-                    <div class="columns">
-                        <p><strong>Frage:</strong> Wer ist unordentlicher?</p>
-                        <p><strong>Stephan:</strong> "Kathi, ganz klar!"</p>
-                        <p><strong>Kathi:</strong> "Das nennt man kreatives Chaos."</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="paper" id="p3">
-            <div class="front">
-                <div class="content">
-                    <h2 class="section-title">Ehe-Gesetze</h2>
-                    <ol class="rules">
-                        <li>Kathi hat immer Recht.</li>
-                        <li>Stephan bringt den Müll raus.</li>
-                        <li>Niemals ohne Kuss aus dem Haus gehen.</li>
-                    </ol>
-                </div>
-            </div>
-            <div class="back">
-                <div class="content">
-                    <h2 class="section-title">Galerie</h2>
-                    <div class="grid">
-                        <div class="grid-item">URLAUB</div>
-                        <div class="grid-item">FESTE</div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="paper" id="p4">
-            <div class="front">
-                <div class="content">
-                    <h2 class="section-title">Danksagung</h2>
-                    <p>Danke an alle, die diesen Tag mit uns feiern!</p>
-                </div>
-            </div>
-            <div class="back">
-                <div class="content">
-                    <h1 class="title-small">ENDE</h1>
-                    <hr class="double">
-                    <p class="center">Stephan & Kathi | 2026</p>
-                </div>
-            </div>
-        </div>
-
+    <div class="nav-overlay">
+        <button id="prevBtn" class="control-btn">Zurück</button>
+        <button id="nextBtn" class="control-btn">Weiter</button>
     </div>
 
-    <div class="nav">
-        <button id="prevBtn" class="btn">&#10094; Zurück</button>
-        <button id="nextBtn" class="btn">Weiter &#10095;</button>
-    </div>
-</div>
+    <div class="book-container">
+        <div id="book" class="book">
+            
+            <div class="paper" id="p1" style="z-index: 4;">
+                <div class="front">
+                    <div class="content">
+                        <p class="meta">SONDERAUSGABE | 2026</p>
+                        <h1 class="newspaper-title">Die Hochzeitspost</h1>
+                        <hr class="line">
+                        <div class="main-article">
+                            <h2>STEPHAN & KATHI</h2>
+                            <div class="img-box">DAS BRAUTPAAR</div>
+                            <p class="headline">Ein Tag für die Ewigkeit</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="back">
+                    <div class="content">
+                        <h2>Inhalt</h2>
+                        <ul class="vintage-list">
+                            <li>Unsere Timeline</li>
+                            <li>Das Interview</li>
+                            <li>Ehe-Gesetze</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
 
-<script src="script.js"></script>
+            <div class="paper" id="p2" style="z-index: 3;">
+                <div class="front">
+                    <div class="content">
+                        <h2>Unsere Timeline</h2>
+                        <div class="timeline">
+                            <p><strong>2020:</strong> Das Kennenlernen</p>
+                            <p><strong>2024:</strong> Der Antrag</p>
+                            <p><strong>2026:</strong> Die Hochzeit</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="back">
+                    <div class="content">
+                        <h2>Das Interview</h2>
+                        <p><strong>Reporter:</strong> Wer hat den ersten Schritt gemacht?</p>
+                        <p><strong>Stephan:</strong> Ich natürlich!</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="paper" id="p3" style="z-index: 2;">
+                <div class="front">
+                    <div class="content">
+                        <h2>Ehe-Gesetze</h2>
+                        <p>1. Die Frau hat immer Recht.</p>
+                        <p>2. Sollte sie unrecht haben, tritt Regel 1 in Kraft.</p>
+                    </div>
+                </div>
+                <div class="back">
+                    <div class="content">
+                        <h2>Galerie</h2>
+                        <div class="photo-grid">
+                            <div class="grid-item">FOTO 1</div>
+                            <div class="grid-item">FOTO 2</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="paper" id="p4" style="z-index: 1;">
+                <div class="front">
+                    <div class="content">
+                        <h2>Danksagung</h2>
+                        <p>Danke an alle Gäste für diesen tollen Tag!</p>
+                    </div>
+                </div>
+                <div class="back">
+                    <div class="content">
+                        <h1 class="newspaper-title-small">ENDE</h1>
+                        <hr class="line">
+                        <p>Stephan & Kathi | 2026</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <script src="script.js"></script>
 </body>
 </html>
