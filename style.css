@@ -1,66 +1,135 @@
-/* Spezielle Zeitungs-Elemente */
-.double-line {
-    border-top: 3px double #000;
-    margin: 10px 0;
+@import url('https://fonts.googleapis.com/css2?family=UnifrakturMaguntia&family=Playfair+Display:wght@700&family=Old+Standard+TT:italic,wght@0,400;0,700;1,400&display=swap');
+
+:root {
+    --paper: #f4eee0;
+    --ink: #1a1a1a;
 }
 
-.section-title {
-    text-transform: uppercase;
-    border-bottom: 1px solid #000;
+body {
+    background-color: #2c2c2c;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    overflow: hidden;
+}
+
+/* ZEITUNGS-CONTAINER */
+.book-container {
+    width: 550px;
+    height: 750px;
+    perspective: 2500px;
+}
+
+.book {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transform-style: preserve-3d;
+}
+
+.page {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transform-origin: left;
+    transition: transform 1s cubic-bezier(0.645, 0.045, 0.355, 1);
+    transform-style: preserve-3d;
+}
+
+.front, .back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: var(--paper);
+    background-image: url("https://www.transparenttextures.com/patterns/paper-fibers.png");
+    padding: 40px;
+    box-sizing: border-box;
+    backface-visibility: hidden;
+    border: 1px solid #d1c7ac;
+    box-shadow: inset 0 0 50px rgba(0,0,0,0.1);
+    color: var(--ink);
+    font-family: 'Old Standard TT', serif;
+}
+
+.back { transform: rotateY(180deg); }
+.flipped { transform: rotateY(-180deg); }
+
+/* TYPOGRAFIE */
+.newspaper-title {
+    font-family: 'UnifrakturMaguntia', serif;
+    font-size: 3.2rem;
     text-align: center;
-    font-size: 1.5rem;
+    margin: 0;
 }
 
-/* Timeline Design */
-.timeline {
-    border-left: 2px solid #333;
-    margin-left: 20px;
+.double-line { border-top: 4px double var(--ink); margin: 10px 0; }
+
+.newspaper-columns {
+    column-count: 2;
+    column-gap: 20px;
+    text-align: justify;
+    font-size: 0.95rem;
+    line-height: 1.4;
+}
+
+/* TIMELINE STYLING */
+.vintage-timeline {
+    border-left: 2px solid var(--ink);
+    margin-left: 10px;
     padding-left: 20px;
+    margin-top: 30px;
 }
 
-.tl-item {
-    margin-bottom: 20px;
+.tl-event {
+    margin-bottom: 30px;
     position: relative;
 }
 
-.tl-item::before {
-    content: "•";
-    position: absolute;
-    left: -27px;
-    font-size: 25px;
-    top: -5px;
+.tl-date {
+    font-family: 'Playfair Display', serif;
+    font-weight: bold;
+    display: block;
+    text-transform: uppercase;
+    font-size: 1.1rem;
 }
 
-/* Foto Platzhalter */
-.photo-placeholder, .grid-box {
-    background: #ddd;
-    border: 1px dashed #666;
-    height: 150px;
+.tl-event::before {
+    content: "";
+    position: absolute;
+    left: -27px;
+    top: 5px;
+    width: 12px;
+    height: 12px;
+    background: var(--ink);
+    border-radius: 50%;
+}
+
+/* BILDER */
+.photo-placeholder {
+    width: 100%;
+    height: 250px;
+    border: 2px solid var(--ink);
+    background: #e0e0e0;
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: 10px 0;
+    margin: 15px 0;
+    font-weight: bold;
+    text-transform: uppercase;
 }
 
-.photo-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 10px;
-}
-
-/* Button Styling */
+/* BUTTONS */
 .flip-btn {
-    background: #000;
-    color: #fff;
-    border: none;
-    padding: 10px;
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    background: transparent;
+    border: 1px solid var(--ink);
+    padding: 5px 15px;
+    font-family: 'Old Standard TT', serif;
     cursor: pointer;
-    margin-top: auto;
-    font-family: 'Georgia', serif;
 }
 
-.flip-btn:hover {
-    background: #444;
-}
-
-.center-text { text-align: center; }
+.flip-btn:hover { background: rgba(0,0,0,0.05); }
