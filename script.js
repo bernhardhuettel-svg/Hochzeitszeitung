@@ -1,6 +1,6 @@
 const prevBtn = document.querySelector("#prevBtn");
 const nextBtn = document.querySelector("#nextBtn");
-const book = document.querySelector("#book");
+const bookContainer = document.querySelector(".book-container");
 
 const papers = [
     document.querySelector("#p1"),
@@ -9,45 +9,46 @@ const papers = [
     document.querySelector("#p4")
 ];
 
-let currentLocation = 1;
-let maxLocation = 5; // 4 Papiere + 1
+let currentState = 1;
+const maxState = 5;
 
-function goNextPage() {
-    if(currentLocation < maxLocation) {
-        if(currentLocation === 1) {
-            book.classList.add("book-open");
+function goNext() {
+    if (currentState < maxState) {
+        if (currentState === 1) {
+            bookContainer.classList.add("open-book");
         }
         
-        const paper = papers[currentLocation - 1];
+        const paper = papers[currentState - 1];
         paper.classList.add("flipped");
-        paper.style.zIndex = currentLocation; // Stapelt die umgeblätterten Seiten nach unten
-
-        if(currentLocation === 4) {
-            book.style.transform = "translateX(100%)";
-        }
+        paper.style.zIndex = currentState; 
         
-        currentLocation++;
+        if (currentState === 4) {
+             bookContainer.style.transform = "translateX(100%)";
+        }
+
+        currentState++;
     }
 }
 
-function goPrevPage() {
-    if(currentLocation > 1) {
-        if(currentLocation === 2) {
-            book.classList.remove("book-open");
-            book.style.transform = "translateX(0%)";
+function goPrev() {
+    if (currentState > 1) {
+        if (currentState === 2) {
+            bookContainer.classList.remove("open-book");
+            bookContainer.style.transform = "translateX(0%)";
         }
-        
-        const paper = papers[currentLocation - 2];
+
+        const paper = papers[currentState - 2];
         paper.classList.remove("flipped");
-        paper.style.zIndex = 5 - (currentLocation - 1); // Holt die Seite wieder nach oben
+        paper.style.zIndex = 5 - (currentState - 1);
 
-        if(currentLocation === 5) {
-            book.classList.add("book-open");
+        if (currentState === 5) {
+            bookContainer.style.transform = "translateX(50%)";
         }
-        
-        currentLocation--;
+
+        currentState--;
     }
 }
 
-nextBtn.addEventListener("click", goNextPage);
-prevBtn.addEventListener("click", goPrevPage);
+// Event Listener hinzufügen
+nextBtn.addEventListener("click", goNext);
+prevBtn.addEventListener("click", goPrev);
