@@ -8,116 +8,129 @@
 </head>
 <body>
 
-<div class="book-container">
-    <div id="book" class="book">
-        
-        <div class="page" id="p1" style="z-index: 5;">
-            <div class="front">
-                <div class="content">
-                    <p class="meta">SONDERAUSGABE | REGIONALES | 2026</p>
-                    <h1 class="newspaper-title">Die Hochzeitspost</h1>
-                    <hr class="double-line">
-                    <div class="main-article">
-                        <h2>STEPHAN & KATHI: DAS JA-WORT</h2>
-                        <div class="photo-placeholder">HIER EIN FOTO DER BEIDEN</div>
-                        <p class="headline-sub">Ein Meilenstein der Liebe: Das Paar traut sich heute offiziell.</p>
+<div class="main-wrapper">
+    <button class="external-nav-btn" onclick="prevPage()">&#10094;</button>
+
+    <div class="book-container">
+        <div id="book" class="book">
+            
+            <div class="page" id="p1" style="z-index: 5;">
+                <div class="front">
+                    <div class="content">
+                        <p class="meta">SONDERAUSGABE | REGIONALES | 2026</p>
+                        <h1 class="newspaper-title">Die Hochzeitspost</h1>
+                        <hr class="double-line">
+                        <div class="main-article">
+                            <h2>STEPHAN & KATHI: DAS JA-WORT</h2>
+                            <div class="photo-placeholder">FOTO VOM BRAUTPAAR</div>
+                            <p class="headline-sub">Ein Meilenstein der Liebe: Das Paar traut sich heute offiziell.</p>
+                            <div class="newspaper-columns">
+                                <p>Es ist offiziell. Nach einer gemeinsamen Reise, die viele Herzen berührte, haben Stephan und Kathi beschlossen, den Bund fürs Leben einzugehen. Freunde und Familie zeigen sich begeistert über diese Nachricht...</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="back">
+                    <div class="content">
+                        <h2 class="section-title">Editorial</h2>
+                        <p>Liebe Gäste, heute feiern wir die Liebe von zwei ganz besonderen Menschen. In dieser Ausgabe blicken wir zurück auf die Anfänge und wagen einen Ausblick.</p>
+                        <hr>
+                        <h3>Inhalt dieser Ausgabe</h3>
+                        <ul class="vintage-list">
+                            <li>Seite 3: Die Chronik ihrer Liebe</li>
+                            <li>Seite 4: Das große Exklusiv-Interview</li>
+                            <li>Seite 5: 10 goldene Ehe-Regeln</li>
+                            <li>Seite 6: Schnappschüsse & Galerie</li>
+                            <li>Rückseite: Danksagung & Impressum</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="page" id="p2" style="z-index: 4;">
+                <div class="front">
+                    <div class="content">
+                        <h2 class="section-title">Die Chronik einer Liebe</h2>
+                        <div class="vintage-timeline">
+                            <div class="tl-event">
+                                <span class="tl-date">Der Funke (2020)</span>
+                                <p>Hier beschreibst du, wie Stephan und Kathi sich zum ersten Mal trafen.</p>
+                            </div>
+                            <div class="tl-event">
+                                <span class="tl-date">Der Antrag (2023)</span>
+                                <p>Ein unvergesslicher Moment, in dem Stephan die alles entscheidende Frage stellte.</p>
+                            </div>
+                            <div class="tl-event">
+                                <span class="tl-date">Heute (2026)</span>
+                                <p>Der Tag, an dem aus "Ich & Du" ein "Wir" wurde.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="back">
+                    <div class="content">
+                        <h2 class="section-title">Das Exklusiv-Interview</h2>
                         <div class="newspaper-columns">
-                            <p>Es ist offiziell. Nach einer gemeinsamen Reise, die viele Herzen berührte, haben Stephan und Kathi beschlossen, den Bund fürs Leben einzugehen. Freunde und Familie zeigen sich begeistert über diese Nachricht...</p>
-                        </div>
-                    </div>
-                    <button class="flip-btn" onclick="nextPage()">Zeitung aufschlagen &rarr;</button>
-                </div>
-            </div>
-            <div class="back">
-                <div class="content">
-                    <h3>Das Inhaltsverzeichnis</h3>
-                    <ul class="vintage-list">
-                        <li>Seite 2: Die Chronik ihrer Liebe (Timeline)</li>
-                        <li>Seite 3: Exklusiv-Interview mit Stephan</li>
-                        <li>Seite 4: Kathis Geheimnisse für eine gute Ehe</li>
-                        <li>Rückseite: Danksagungen & Impressum</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-
-        <div class="page" id="p2" style="z-index: 4;">
-            <div class="front">
-                <div class="content">
-                    <h2 class="section-title">Die Chronik einer Liebe</h2>
-                    <div class="vintage-timeline">
-                        <div class="tl-event">
-                            <span class="tl-date">Der Funke</span>
-                            <p>Hier beschreibst du, wie Stephan und Kathi sich zum ersten Mal sahen.</p>
-                        </div>
-                        <div class="tl-event">
-                            <span class="tl-date">Erster Urlaub</span>
-                            <p>Die erste gemeinsame Reise – ein Test für jede Beziehung, den sie mit Bravour bestanden.</p>
-                        </div>
-                        <div class="tl-event">
-                            <span class="tl-date">Die Entscheidung</span>
-                            <p>Der Moment, in dem Stephan wusste: Kathi ist die Eine.</p>
+                            <p><strong>Frage:</strong> Wer kann besser kochen?</p>
+                            <p><strong>Stephan:</strong> "Ich, definitiv. Aber Kathi kann besser bestellen!"</p>
+                            <p><strong>Frage:</strong> Was liebst du am meisten an ihr?</p>
+                            <p><strong>Stephan:</strong> "Ihr Lächeln und dass sie mich immer zum Lachen bringt."</p>
+                            <p><strong>Frage:</strong> Und du an ihm, Kathi?</p>
+                            <p><strong>Kathi:</strong> "Seine Ruhe und dass er immer für mich da ist."</p>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="back">
-                <div class="content">
-                    <h2 class="section-title">Das Interview</h2>
-                    <div class="newspaper-columns">
-                        <p><strong>Frage:</strong> Wer gibt bei euch den Ton an?</p>
-                        <p><strong>Stephan:</strong> "Ich natürlich! Solange Kathi damit einverstanden ist."</p>
-                        <p><strong>Kathi:</strong> (lacht) "Genau so ist es."</p>
+
+            <div class="page" id="p3" style="z-index: 3;">
+                <div class="front">
+                    <div class="content">
+                        <h2 class="section-title">10 goldene Ehe-Regeln</h2>
+                        <ol class="vintage-rules">
+                            <li>Kathi hat immer das letzte Wort (meistens "Ja, Schatz").</li>
+                            <li>Niemals hungrig ins Bett gehen – oder streiten.</li>
+                            <li>Den Hochzeitstag IMMER im Kalender markieren.</li>
+                            <li>Geduld ist die Tugend der Glücklichen.</li>
+                        </ol>
+                    </div>
+                </div>
+                <div class="back">
+                    <div class="content">
+                        <h2 class="section-title">Galerie der Liebe</h2>
+                        <div class="photo-grid">
+                            <div class="grid-box">ERSTER URLAUB</div>
+                            <div class="grid-box">GEMEINSAMES HOBBY</div>
+                        </div>
+                        <p class="center-text"><em>"Liebe ist kein Ziel, sondern eine Reise."</em></p>
                     </div>
                 </div>
             </div>
-        </div>
 
-        <div class="page" id="p3" style="z-index: 3;">
-            <div class="front">
-                <div class="content">
-                    <h2 class="section-title">Tipps für Stephan</h2>
-                    <p class="center-text"><em>Damit der Haussegen niemals schief hängt:</em></p>
-                    <ol class="vintage-rules">
-                        <li>Kathi hat immer Recht.</li>
-                        <li>Sollte sie einmal nicht Recht haben, tritt Regel 1 in Kraft.</li>
-                        <li>Blumen sind kein Bestechungsmittel, sondern Grundnahrungsmittel.</li>
-                    </ol>
+            <div class="page" id="p4" style="z-index: 2;">
+                <div class="front">
+                    <div class="content">
+                        <h2 class="section-title">Glückwünsche</h2>
+                        <p>Wir wünschen Stephan und Kathi für ihre gemeinsame Zukunft nur das Beste: Gesundheit, Abenteuer und unendlich viel Liebe.</p>
+                        <div class="photo-placeholder">FOTO DER GÄSTE</div>
+                    </div>
                 </div>
-            </div>
-            <div class="back">
-                <div class="content">
-                    <h2 class="section-title">Fotogalerie</h2>
-                    <div class="photo-grid">
-                        <div class="grid-box">Lustiger Moment</div>
-                        <div class="grid-box">Schicker Moment</div>
+                <div class="back">
+                    <div class="content">
+                        <h1 class="newspaper-title-small">ENDE DER AUSGABE</h1>
+                        <hr class="double-line">
+                        <p class="center-text">Danke, dass ihr diesen Tag mit uns feiert!</p>
+                        <p class="meta center-text">Druck & Verlag: Hochzeitsgesellschaft 2026</p>
+                        <p class="center-text" style="font-size: 0.7rem; margin-top: 50px;">Digital erstellt für Stephan & Kathi</p>
                     </div>
                 </div>
             </div>
-        </div>
 
-        <div class="page" id="p4" style="z-index: 2;">
-            <div class="front">
-                <div class="content">
-                    <h2 class="section-title">Wünsche der Gäste</h2>
-                    <p>Hier ist Platz für die schönsten Zitate und Wünsche, die Stephan und Kathi auf ihrem Weg begleiten sollen.</p>
-                </div>
-            </div>
-            <div class="back">
-                <div class="content">
-                    <h1 class="newspaper-title-small">Ende der Ausgabe</h1>
-                    <p class="center-text">Wir wünschen Stephan & Kathi alles Glück der Welt!</p>
-                    <hr class="double-line">
-                    <p class="meta center-text">Druck & Verlag: Hochzeitsgesellschaft 2026</p>
-                    <button class="flip-btn" onclick="prevPage()">&larr; Zurück</button>
-                </div>
-            </div>
         </div>
-
     </div>
+
+    <button class="external-nav-btn" onclick="nextPage()">&#10095;</button>
 </div>
 
 <script src="script.js"></script>
 </body>
 </html>
-
