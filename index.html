@@ -2,120 +2,109 @@
 <html lang="de">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Hochzeitszeitung: Stephan & Kathi</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<div class="viewport-wrapper">
-    <button class="nav-arrow prev" onclick="prevPage()">&#10094;</button>
+<div class="app-container">
+    <div class="nav-controls">
+        <button class="nav-btn" onclick="prevPage()">&#10094; Zurück</button>
+        <button class="nav-btn" onclick="nextPage()">Weiter &#10095;</button>
+    </div>
 
-    <div class="book-scaler">
-        <div id="book" class="book">
+    <div class="book-viewport">
+        <div class="book" id="book">
             
-            <div class="page" id="p1" style="z-index: 5;">
+            <div class="paper" id="p1" style="z-index: 4;">
                 <div class="front">
-                    <div class="content">
-                        <p class="meta">SONDERAUSGABE | 2026</p>
-                        <h1 class="newspaper-title">Die Hochzeitspost</h1>
-                        <hr class="double-line">
-                        <div class="main-article">
+                    <div class="content cover">
+                        <p class="meta">EXTRA-BLATT | 2026</p>
+                        <h1 class="main-title">Die Hochzeitspost</h1>
+                        <hr class="line">
+                        <div class="article">
                             <h2>STEPHAN & KATHI</h2>
-                            <div class="photo-placeholder">UNSER FOTO</div>
-                            <p class="headline-sub">Das Ja-Wort des Jahres!</p>
-                            <div class="newspaper-columns">
-                                <p>Heute ist der große Tag gekommen. Stephan und Kathi feiern ihre Liebe im Kreise ihrer Liebsten...</p>
+                            <div class="img-box">FOTO BRAUTPAAR</div>
+                            <p class="sub-line">Das Ja-Wort des Jahres!</p>
+                            <div class="cols">
+                                <p>Heute feiern wir die Hochzeit von Stephan und Kathi. Ein Tag voller Liebe und Freude...</p>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="back">
                     <div class="content">
-                        <h2 class="section-title">Editorial</h2>
-                        <p>Ein Rückblick auf die schönsten Momente zweier Herzen, die sich gesucht und gefunden haben.</p>
-                        <hr>
-                        <h3>Inhalt</h3>
-                        <ul class="vintage-list">
-                            <li>Chronik der Liebe</li>
-                            <li>Das große Interview</li>
-                            <li>Ehe-Regeln</li>
+                        <h2>Inhalt</h2>
+                        <ul class="list">
+                            <li>Chronik der Liebe (S. 3)</li>
+                            <li>Das Interview (S. 4)</li>
+                            <li>Ehe-Regeln (S. 5)</li>
                         </ul>
                     </div>
                 </div>
             </div>
 
-            <div class="page" id="p2" style="z-index: 4;">
+            <div class="paper" id="p2" style="z-index: 3;">
                 <div class="front">
                     <div class="content">
-                        <h2 class="section-title">Unsere Timeline</h2>
-                        <div class="vintage-timeline">
-                            <div class="tl-event"><span class="tl-date">2020</span><p>Das erste Treffen</p></div>
-                            <div class="tl-event"><span class="tl-date">2023</span><p>Der Antrag</p></div>
-                            <div class="tl-event"><span class="tl-date">Heute</span><p>Hochzeit!</p></div>
+                        <h2>Unsere Timeline</h2>
+                        <div class="timeline">
+                            <p><strong>2020:</strong> Das erste Treffen</p>
+                            <p><strong>2023:</strong> Der Antrag</p>
+                            <p><strong>2026:</strong> Hochzeit!</p>
                         </div>
                     </div>
                 </div>
                 <div class="back">
                     <div class="content">
-                        <h2 class="section-title">Das Interview</h2>
-                        <div class="newspaper-columns">
-                            <p><strong>Frage:</strong> Wer hat den ersten Schritt gemacht?</p>
-                            <p><strong>Stephan:</strong> "Eindeutig ich!"</p>
-                            <p><strong>Kathi:</strong> "Er glaubt das wirklich..."</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="page" id="p3" style="z-index: 3;">
-                <div class="front">
-                    <div class="content">
-                        <h2 class="section-title">Ehe-Regeln</h2>
-                        <ol class="vintage-rules">
-                            <li>Kathi hat immer Recht.</li>
-                            <li>Sollte sie unrecht haben, tritt Regel 1 in Kraft.</li>
-                            <li>Blumen helfen bei jedem Gewitter.</li>
-                        </ol>
-                    </div>
-                </div>
-                <div class="back">
-                    <div class="content">
-                        <h2 class="section-title">Galerie</h2>
-                        <div class="photo-grid">
-                            <div class="grid-box">URLAUB</div>
-                            <div class="grid-box">FEIER</div>
+                        <h2>Das Interview</h2>
+                        <div class="cols">
+                            <p><strong>Frage:</strong> Wer kocht besser? <br><strong>Stephan:</strong> Ich! <br><strong>Kathi:</strong> Träum weiter!</p>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <div class="page" id="p4" style="z-index: 2;">
+            <div class="paper" id="p3" style="z-index: 2;">
                 <div class="front">
                     <div class="content">
-                        <h2 class="section-title">Glückwünsche</h2>
-                        <p>Alles Liebe für euren gemeinsamen Weg!</p>
-                        <div class="photo-placeholder">GÄSTE-FOTO</div>
+                        <h2>Ehe-Regeln</h2>
+                        <p>1. Kathi hat immer Recht.</p>
+                        <p>2. Stephan hat Ruhe.</p>
                     </div>
                 </div>
                 <div class="back">
                     <div class="content">
-                        <h1 class="newspaper-title-small">ENDE</h1>
-                        <hr class="double-line">
-                        <p class="center-text">Stephan & Kathi | 2026</p>
-                        <p class="meta center-text">Druck: Wedding Press</p>
+                        <h2>Galerie</h2>
+                        <div class="grid">
+                            <div class="grid-item">Foto 1</div>
+                            <div class="grid-item">Foto 2</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="paper" id="p4" style="z-index: 1;">
+                <div class="front">
+                    <div class="content">
+                        <h2>Glückwünsche</h2>
+                        <p>Alles Liebe für Stephan & Kathi!</p>
+                    </div>
+                </div>
+                <div class="back">
+                    <div class="content footer-page">
+                        <h1 class="small-title">ENDE</h1>
+                        <hr>
+                        <p>Stephan & Kathi | 2026</p>
                     </div>
                 </div>
             </div>
 
         </div>
     </div>
-
-    <button class="nav-arrow next" onclick="nextPage()">&#10095;</button>
 </div>
 
 <script src="script.js"></script>
 </body>
-</html>
-
 </html>
