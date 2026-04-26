@@ -3,95 +3,155 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>Stephan & Kathi - Hochzeitszeitung</title>
+    <title>Hochzeitsmagazin: Kathi & Stephan</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
     <div class="nav-overlay">
-        <button id="prevBtn" class="control-btn">Zurück</button>
-        <button id="nextBtn" class="control-btn">Weiter</button>
+        <button id="prevBtn" class="control-btn"> Zurück</button>
+        <button id="nextBtn" class="control-btn">Weiter </button>
     </div>
 
     <div class="book-container">
         <div id="book" class="book">
             
-            <div class="paper" id="p1" style="z-index: 4;">
+            <div class="paper" id="p1">
                 <div class="front">
-                    <div class="content">
-                        <p class="meta">SONDERAUSGABE | 2026</p>
-                        <h1 class="newspaper-title">Die Hochzeitspost</h1>
-                        <hr class="line">
-                        <div class="main-article">
-                            <h2>STEPHAN & KATHI</h2>
-                            <div class="img-box">DAS BRAUTPAAR</div>
-                            <p class="headline">Ein Tag für die Ewigkeit</p>
-                        </div>
+                    <div class="content cover">
+                        <p class="meta">MAGAZIN ZUR HOCHZEIT VON</p>
+                        <h1 class="main-title">KATHI & STEPHAN</h1>
+                        <div class="vintage-divider"></div>
+                        <div class="photo-frame">TITELFOTO</div>
+                        <p class="footer-date">24. MAI 2026</p>
                     </div>
                 </div>
                 <div class="back">
                     <div class="content">
-                        <h2>Inhalt</h2>
-                        <ul class="vintage-list">
-                            <li>Unsere Timeline</li>
-                            <li>Das Interview</li>
-                            <li>Ehe-Gesetze</li>
+                        <h2 class="title-small">INHALTSVERZEICHNIS</h2>
+                        <ul class="toc-list">
+                            <li><span>Steckbrief Braut</span><span>4</span></li>
+                            <li><span>Steckbrief Bräutigam</span><span>5</span></li>
+                            <li><span>Vorwort</span><span>6</span></li>
+                            <li><span>Kein Drehbuch, kein Plan</span><span>7</span></li>
+                            <li><span>Das Interview</span><span>8</span></li>
+                            <li><span>Ein Paar, zwei Perspektiven</span><span>10</span></li>
+                            <li><span>Das Hochzeitsquiz</span><span>11</span></li>
+                            <li><span>Die Eltern packen aus</span><span>12</span></li>
+                            <li><span>Das Rätsel</span><span>17</span></li>
+                            <li><span>Die Ehegebote</span><span>18</span></li>
                         </ul>
                     </div>
                 </div>
             </div>
 
-            <div class="paper" id="p2" style="z-index: 3;">
+            <div class="paper" id="p2">
                 <div class="front">
                     <div class="content">
-                        <h2>Unsere Timeline</h2>
-                        <div class="timeline">
-                            <p><strong>2020:</strong> Das Kennenlernen</p>
-                            <p><strong>2024:</strong> Der Antrag</p>
-                            <p><strong>2026:</strong> Die Hochzeit</p>
+                        <h2 class="section-title">DIE BRAUT: KATHI</h2>
+                        <div class="profile-grid">
+                            <p><strong>Name:</strong> Katharina Kucz</p>
+                            <p><strong>Geburtsdatum:</strong> 15.07.1990 in Weiden</p>
+                            <p><strong>Beruf:</strong> Fachangestellte für Arbeitsförderung</p>
+                            <p><strong>Hobbys:</strong> Fussball gucken (Bremen)</p>
+                            <p><strong>Lieblingsessen:</strong> Chicken Tikka Masala</p>
+                            <p><strong>Macke:</strong> "habe ich nicht"</p>
+                            <p><strong>Motto:</strong> "good vibes only"</p>
+                            <p><strong>Fun Fact:</strong> wie geht nochmal Schleife binden?</p>
                         </div>
                     </div>
                 </div>
                 <div class="back">
                     <div class="content">
-                        <h2>Das Interview</h2>
-                        <p><strong>Reporter:</strong> Wer hat den ersten Schritt gemacht?</p>
-                        <p><strong>Stephan:</strong> Ich natürlich!</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="paper" id="p3" style="z-index: 2;">
-                <div class="front">
-                    <div class="content">
-                        <h2>Ehe-Gesetze</h2>
-                        <p>1. Die Frau hat immer Recht.</p>
-                        <p>2. Sollte sie unrecht haben, tritt Regel 1 in Kraft.</p>
-                    </div>
-                </div>
-                <div class="back">
-                    <div class="content">
-                        <h2>Galerie</h2>
-                        <div class="photo-grid">
-                            <div class="grid-item">FOTO 1</div>
-                            <div class="grid-item">FOTO 2</div>
+                        <h2 class="section-title">DER BRÄUTIGAM: STEPHAN</h2>
+                        <div class="profile-grid">
+                            <p><strong>Name:</strong> Stephan</p>
+                            <p><em>(Inhalte von Seite 5 der PDF)</em></p>
+                            <p>Hier werden Stephans Details analog zu Kathis Steckbrief eingefügt.</p>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <div class="paper" id="p4" style="z-index: 1;">
+            <div class="paper" id="p3">
                 <div class="front">
                     <div class="content">
-                        <h2>Danksagung</h2>
-                        <p>Danke an alle Gäste für diesen tollen Tag!</p>
+                        <h2 class="section-title">KEIN DREHBUCH, KEIN PLAN</h2>
+                        <div class="columns-text">
+                            <p>Das Leben schreibt die besten Geschichten. Ohne festes Skript, aber mit viel Herz haben wir uns gefunden. Ein Rückblick auf die Reise von Kathi und Stephan...</p>
+                        </div>
                     </div>
                 </div>
                 <div class="back">
                     <div class="content">
-                        <h1 class="newspaper-title-small">ENDE</h1>
-                        <hr class="line">
-                        <p>Stephan & Kathi | 2026</p>
+                        <h2 class="section-title">DAS INTERVIEW</h2>
+                        <div class="columns-text">
+                            <p><strong>Wer braucht länger im Bad?</strong><br>Kathi (die Locken müssen perfekt sein!).</p>
+                            <p><strong>Wer hat den ersten Schritt gemacht?</strong><br>Stephan (behauptet er zumindest).</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="paper" id="p4">
+                <div class="front">
+                    <div class="content">
+                        <h2 class="section-title">DAS HOCHZEITSQUIZ</h2>
+                        <p>Testet euer Wissen über das Brautpaar!</p>
+                        <div class="quiz-box">
+                            <p>1. Wo war der erste Urlaub?</p>
+                            <p>2. Was ist Kathis Lieblingsgetränk?</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="back">
+                    <div class="content">
+                        <h2 class="section-title">DIE ELTERN PACKEN AUS</h2>
+                        <div class="columns-text">
+                            <p>Geschichten aus der Kindheit, die vielleicht besser im Archiv geblieben wären – exklusiv von Mama & Papa.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="paper" id="p5">
+                <div class="front">
+                    <div class="content">
+                        <h2 class="section-title">DIE EHEGEBOTE</h2>
+                        <div class="columns-text">
+                            <p>1. Ihr sollt nicht neunmalklug werden.</p>
+                            <p>2. Ihr sollt einander immer zuhören.</p>
+                            <p>3. Der Humor darf niemals fehlen.</p>
+                            <p>4. Gemeinsam ist man weniger allein.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="back">
+                    <div class="content">
+                        <h2 class="section-title">PETRI HEIL!</h2>
+                        <p>Der Fischereiverein lässt grüßen!</p>
+                        <div class="photo-frame-small">FISCH-FOTO</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="paper" id="p6">
+                <div class="front">
+                    <div class="content">
+                        <h2 class="section-title">DANKSAGUNG</h2>
+                        <p>Vielen Dank an alle, die diesen Weg mit uns gehen!</p>
+                    </div>
+                </div>
+                <div class="back">
+                    <div class="content footer-page">
+                        <h2 class="title-small">DIE VERANTWORTLICHEN</h2>
+                        <div class="impressum-box">
+                            <p><strong>Matthias (Bruder):</strong> Abteilung für peinliche Archiv-Funde.</p>
+                            <p><strong>Ela & Verena (Schwestern):</strong> Abteilung für Ästhetik & Klatsch.</p>
+                            <hr>
+                            <p><strong>Haftung:</strong> Wer Fehler findet, darf sie behalten.</p>
+                            <p><strong>Quellenschutz:</strong> Mama & Papa genießen Zeugenschutz.</p>
+                        </div>
                     </div>
                 </div>
             </div>
